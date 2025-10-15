@@ -2,6 +2,10 @@ import { NextRequest, NextResponse } from 'next/server';
  
 export default async function middleware(request: NextRequest) {
     try{
+     console.log(request.nextUrl)
+     if (request.nextUrl.pathname.startsWith('/auth')) {
+      console.log("test")
+     }
         const response = await fetch(request.nextUrl);
         console.log(response.url);
         return NextResponse.next();
