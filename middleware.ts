@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export default async function middleware(request: NextRequest) {
     try{
      console.log(request.nextUrl)
+     console.log(request.url)
      if (request.nextUrl.pathname.startsWith('/auth')) {
       console.log("test")
      }
